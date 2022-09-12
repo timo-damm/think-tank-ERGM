@@ -9,6 +9,11 @@
 # send an Email to timo.damm.bs@icloud.com ~Timo
 
 #----general preparations----
+list.of.packages <- c("statnet", "mice", "ggplot2", "GGally" , "MASS", "readxl",
+                      "tidyverse", "fastnet", "scales")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
 library(statnet)
 library(mice)
 library(ggplot2)
@@ -1137,7 +1142,7 @@ thinktank_deg_1998        <- sna::degree(thinktank_overlap_1998, cmode="freeman"
 thinktank_degscaled_1998  <- sna::degree(thinktank_overlap_1998, cmode="freeman", rescale=TRUE) # Freeman degree centrality with scaling 
 thinktank_bet_1998        <- sna::betweenness(thinktank_overlap_1998) # Betweeeness centrality
 thinktank_clos_1998       <- sna::closeness(thinktank_overlap_1998, cmode="suminvdir") # Closeness centrality
-thinktank_eig_1998        <- sna::evcent(thinktank_overlap_1998) # Eigenvector
+thinktank_eig_1998        <- sna::evcent(thinktank_overlap_1998) # Eigenvector centrality
 thinktank_clus_1998       <- sna::gtrans(thinktank_overlap_1998) #transitivity/clustering
 thinktank_geo_1998        <- sna::geodist(thinktank_overlap_1998, inf.replace = NA,
                                           count.paths = T) #geodesic distance/path length

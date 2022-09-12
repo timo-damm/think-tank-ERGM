@@ -1,11 +1,18 @@
 ############################
 # Think tanks network ERGM # 
 ############################
-# If any questions come up, do feel free to 
+# Based on the code from the websites below
+# Intro to ERGMs, marginal effects and goodness-of-fit  for One-Mode Networks #
+# https://rstudio-pubs-static.s3.amazonaws.com/471073_d45a4acd780b4987932dc8fc47c46dd5.html
+# I departed quite a bit from this if any questions come up, do feel free to 
 # send an Email to timo.damm.bs@icloud.com ~Timo
+list.of.packages <- c("statnet", "mice", "finalfit", "GGally",
+                      "sna", "scales", "Amelia")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
 library(finalfit)
 library(statnet)
-library(network)
 library(sna)
 library(mice)
 library(scales)
@@ -183,6 +190,26 @@ tt_net_2011%v% "company_idealogy_v2" <- nodal_attr_2011$company_idealogy_v2
 tt_net_2011%v%"brookings_perc"<-nodal_attr_2011$brookings_perc
 tt_net_2011%v% "heritage_perc"<-nodal_attr_2011$heritage_perc
 tt_net_2011%v% "RAND_perc"<-nodal_attr_2011$rand_perc
+
+#unsure how the matching process is done
+#(as in the matching of cases in the network and the nodal attributes)
+#I ordered the code in the beginning to increase the chance to of matching the
+#right attributes to the right nodes
+
+#-----multiple imputation using Amelia-----
+#nodal_attr$Corporate_affiliation <- NULL
+#nodal_attr$Government_affiliation <- NULL #removing variables that do not vary,
+##otherwise Amelia does not work
+#a.out <- amelia(nodal_attr, m = 100 ,  boot.type = "ordinary", idvars = c("X", "Think_tank_name")) 
+##caution: this process takes a while 
+#summary(a.out)
+#plot(a.out)
+
+#write.amelia(obj = a.out, separate = F, file.stem = "imputations_1998", format = "csv")
+##if separate is set to TRUE, all 100 imputed datasets are saved separately
+#imputations_1998 <- read.csv("/home/td/random_coding/think tank work/data/imputations_1998.csv")
+##examining patterns of missingness
+#missing_plot(nodal_attr)
 
 #############################################
 #Part II: Descripitive Statistics and Plots # (done in the edgelist analysis, can be deleted here?)
