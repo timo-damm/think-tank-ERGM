@@ -27,39 +27,39 @@ library(scales)
 #-----data import----
 # Entering the edgelists (note that the filepath is specific to my machine, so you
 # will need to modify it in order to make it work)
-TTboard1998 <- read_excel("/home/td/random_coding/think tank work/data/1998TTboard.xls",col_names = FALSE,na = "")
-TTboard1999 <- read_excel("/home/td/random_coding/think tank work/data/1999TTboard.xls",col_names = FALSE,na = "")
-TTboard2000 <- read_excel("/home/td/random_coding/think tank work/data/2000TTboard.xls",col_names = FALSE,na = "")
-TTboard2001 <- read_excel("/home/td/random_coding/think tank work/data/2001TTboard.xls",col_names = FALSE,na = "")
-TTboard2002 <- read_excel("/home/td/random_coding/think tank work/data/2002TTboard.xls",col_names = FALSE,na = "")
-TTboard2003 <- read_excel("/home/td/random_coding/think tank work/data/2003TTboard.xls",col_names = FALSE,na = "")
-TTboard2004 <- read_excel("/home/td/random_coding/think tank work/data/2004TTboard.xls",col_names = FALSE,na = "")
-TTboard2005 <- read_excel("/home/td/random_coding/think tank work/data/2005TTboard.xls",col_names = FALSE,na = "")
-TTboard2006 <- read_excel("/home/td/random_coding/think tank work/data/2006TTboard.xls",col_names = FALSE,na = "")
-TTboard2007 <- read_excel("/home/td/random_coding/think tank work/data/2007TTboard.xls",col_names = FALSE,na = "")
-TTboard2008 <- read_excel("/home/td/random_coding/think tank work/data/2008TTboard.xls",col_names = FALSE,na = "")
-TTboard2009 <- read_excel("/home/td/random_coding/think tank work/data/2009TTboard.xls",col_names = FALSE,na = "")
-TTboard2010 <- read_excel("/home/td/random_coding/think tank work/data/2010TTboard.xls",col_names = FALSE,na = "")
-TTboard2011 <- read_excel("/home/td/random_coding/think tank work/data/2011TTboard.xls",col_names = FALSE,na = "")
+TTboard1998 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/1998TTboard.xls",col_names = FALSE,na = "")
+TTboard1999 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/1999TTboard.xls",col_names = FALSE,na = "")
+TTboard2000 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2000TTboard.xls",col_names = FALSE,na = "")
+TTboard2001 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2001TTboard.xls",col_names = FALSE,na = "")
+TTboard2002 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2002TTboard.xls",col_names = FALSE,na = "")
+TTboard2003 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2003TTboard.xls",col_names = FALSE,na = "")
+TTboard2004 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2004TTboard.xls",col_names = FALSE,na = "")
+TTboard2005 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2005TTboard.xls",col_names = FALSE,na = "")
+TTboard2006 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2006TTboard.xls",col_names = FALSE,na = "")
+TTboard2007 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2007TTboard.xls",col_names = FALSE,na = "")
+TTboard2008 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2008TTboard.xls",col_names = FALSE,na = "")
+TTboard2009 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2009TTboard.xls",col_names = FALSE,na = "")
+TTboard2010 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2010TTboard.xls",col_names = FALSE,na = "")
+TTboard2011 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2011TTboard.xls",col_names = FALSE,na = "")
 
 #importing the think tank attributes: 
-TTattributes1998 <- read_excel("/home/td/random_coding/think tank work/data/1998 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes1999 <-read_excel("/home/td/random_coding/think tank work/data/1999 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2000 <-read_excel("/home/td/random_coding/think tank work/data/2000 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2001 <-read_excel("/home/td/random_coding/think tank work/data/2001 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2002 <-read_excel("/home/td/random_coding/think tank work/data/2002 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2003 <-read_excel("/home/td/random_coding/think tank work/data/2003 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2004 <-read_excel("/home/td/random_coding/think tank work/data/2004 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2005 <-read_excel("/home/td/random_coding/think tank work/data/2005 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2006 <-read_excel("/home/td/random_coding/think tank work/data/2006 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2007 <-read_excel("/home/td/random_coding/think tank work/data/2007 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2008 <-read_excel("/home/td/random_coding/think tank work/data/2008 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2009 <-read_excel("/home/td/random_coding/think tank work/data/2009 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2010 <-read_excel("/home/td/random_coding/think tank work/data/2010 think tank attributes.xls",col_names = TRUE,na = "")
-TTattributes2011 <-read_excel("/home/td/random_coding/think tank work/data/2011 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes1998 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/1998 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes1999 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/1999 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2000 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2000 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2001 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2001 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2002 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2002 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2003 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2003 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2004 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2004 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2005 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2005 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2006 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2006 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2007 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2007 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2008 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2008 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2009 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2009 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2010 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2010 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes2011 <-read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/2011 think tank attributes.xls",col_names = TRUE,na = "")
 
 #importing the list of "problematic think tanks"  
-#TTproblematic <- read_excel("/home/td/random_coding/think tank work/data/Think tanks with more than double increase in board size (1998-2011).xlsx",col_names = TRUE,na = "")
+#TTproblematic <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/Think tanks with more than double increase in board size (1998-2011).xlsx",col_names = TRUE,na = "")
 
 #----data preparation and cleaning----
 # Missing data
@@ -135,78 +135,50 @@ TTboard_full <- rbind(TTboard1998, TTboard1999, TTboard2000, TTboard2001, TTboar
 netTTboard_full <- as.network(TTboard_full, bipartite=T, directed=F, multiple = T) #to allow for multiplex edges
 
 #----finding "jumps" in the numbers of board members----
-change98 <-  TTboard1998 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change99 <- TTboard1999 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change00 <-TTboard2000 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change01 <- TTboard2001 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change02 <- TTboard2002 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change03 <- TTboard2003 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change04 <- TTboard2004 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change05 <- TTboard2005 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change06 <- TTboard2006 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change07 <- TTboard2007 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change08 <- TTboard2008 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change09 <- TTboard2009 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change10 <- TTboard2010 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
-change11 <- TTboard2011 %>% filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n())
+change.function <- function(x){
+  x %>% filter(!is.na(...2)) %>%
+    group_by(...2) %>%
+    summarize(n = n())
+}
+change98 <- change.function(TTboard1998)
+change99 <- change.function(TTboard1999)
+change00 <-change.function(TTboard2000)
+change01 <-change.function(TTboard2001)
+change02 <-change.function(TTboard2002)
+change03 <-change.function(TTboard2003)
+change04 <-change.function(TTboard2004)
+change05 <-change.function(TTboard2005)
+change06 <-change.function(TTboard2006)
+change07 <-change.function(TTboard2007)
+change08 <-change.function(TTboard2008)
+change09 <-change.function(TTboard2009)
+change10 <-change.function(TTboard2010)
+change11 <-change.function(TTboard2011)
 
-change_full <- merge(change98, change99, by = "...2")
-change_full <- merge(change_full, change00, by = "...2")
-change_full <- merge(change_full, change01, by = "...2")
-change_full <- merge(change_full, change02, by = "...2")
-change_full <- merge(change_full, change03, by = "...2")
-change_full <- merge(change_full, change04, by = "...2")
-change_full <- merge(change_full, change05, by = "...2")
-change_full <- merge(change_full, change06, by = "...2")
-change_full <- merge(change_full, change07, by = "...2")
-change_full <- merge(change_full, change08, by = "...2")
-change_full <- merge(change_full, change09, by = "...2")
-change_full <- merge(change_full, change10, by = "...2")
-change_full <- merge(change_full, change11, by = "...2")
+merge_list <- list(change98, change99, change00, change01, change02,
+                         change03, change04, change05, change06, change07, 
+                         change08, change09, change10, change11)
+
+sd.function <- function(x){
+change_full <- x %>% reduce(right_join, by='...2')
 change_full <- as.data.frame(t(change_full))
 colnames <- change_full[1,]
 change_full <- change_full[-1,] 
 change_full <- as.data.frame(lapply(change_full, as.numeric))
 colnames(change_full) <- colnames #this table contains
 #changes in board members for all think tanks for all years
-
 sd <- change_full %>% 
   summarise_if(is.numeric,sd) 
 colnames(sd) <- colnames
 sd <- as.data.frame(t(sd))
 sd <- sort(sd, decreasing =  T)
-sd1 <- slice(sd, 1:20)
+}
+sd <- sd.function(merge_list)
+top_sd <- slice(sd, 1:20,)
+
 #from this we can see the different SDs
 barplot(height = sd$V1, names.arg = rownames(sd), las = 2)
-barplot(height = sd1$V1, names.arg = rownames(sd1), las = 2)
+barplot(height = top_sd$V1, names.arg = rownames(top_sd), las = 2)
 
 
 #----Descriptive statistics for the two mode network----
@@ -348,259 +320,77 @@ max(TTattributes2011$heritage_dummy, na.rm = TRUE)
 sd(TTattributes2011$heritage_dummy, na.rm = TRUE)
 
 #----1. biggest and smallest board across the years and in total----
-TTboard_full %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard_full %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard1998 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard1998 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard1999 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard1999 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2000 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2000 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2001 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2001 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2002%>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2002 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2003 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2003 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2004 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2004 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2005 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2005 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2006 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2006 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2007 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2007 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2008 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2008 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2009 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2009 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2010 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2010 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
-TTboard2011 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(desc(n)) %>%
-  slice(1)
-TTboard2011 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) %>%
-  arrange(n) %>%
-  slice(1)
+biggest.board <- function(x){
+  x %>%
+    filter(!is.na(...2)) %>%
+    group_by(...2) %>%
+    summarize(n = n()) %>%
+    arrange(desc(n)) %>%
+    slice(1)
+}
+biggest.board(TTboard_full)
+biggest.board(TTboard1998)
+biggest.board(TTboard1999)
+biggest.board(TTboard2000)
+biggest.board(TTboard2001)
+biggest.board(TTboard2002)
+biggest.board(TTboard2003)
+biggest.board(TTboard2004)
+biggest.board(TTboard2005)
+biggest.board(TTboard2006)
+biggest.board(TTboard2007)
+biggest.board(TTboard2008)
+biggest.board(TTboard2009)
+biggest.board(TTboard2010)
+biggest.board(TTboard2011)
+
+smallest.board <- function(x){
+  x %>%
+    filter(!is.na(...2)) %>%
+    group_by(...2) %>%
+    summarize(n = n()) %>%
+    arrange(n) %>%
+    slice(1)
+}
+smallest.board(TTboard_full)
+smallest.board(TTboard1998)
+smallest.board(TTboard1999)
+smallest.board(TTboard2000)
+smallest.board(TTboard2001)
+smallest.board(TTboard2002)
+smallest.board(TTboard2003)
+smallest.board(TTboard2004)
+smallest.board(TTboard2005)
+smallest.board(TTboard2006)
+smallest.board(TTboard2007)
+smallest.board(TTboard2008)
+smallest.board(TTboard2009)
+smallest.board(TTboard2010)
+smallest.board(TTboard2011)
 
 
 # standard deviations
-sd98 <- TTboard1998 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd98$n)
-sd99 <- TTboard1999 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd99$n)
-sd00 <- TTboard2000 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd00$n)
-sd01 <- TTboard2001 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd01$n)
-sd02 <- TTboard2002 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd02$n)
-sd03 <- TTboard2003 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd03$n)
-sd04 <- TTboard2004 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd04$n)
-sd05 <- TTboard2005 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd05$n)
-sd06 <- TTboard2006 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd06$n)
-sd07 <- TTboard2007 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd07$n)
-sd08 <- TTboard2008 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd08$n)
-sd09 <- TTboard2009 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd09$n)
-sd10 <- TTboard2010 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd10$n)
-sd11 <- TTboard2011 %>%
-  filter(!is.na(...2)) %>%
-  group_by(...2) %>%
-  summarize(n = n()) 
-sd(sd11$n)
+sorted.sd <- function(x){
+  sd <- x %>%
+    filter(!is.na(...2)) %>%
+    group_by(...2) %>%
+    summarize(n = n()) 
+  sd(sd$n)
+}
+sd98 <- sorted.sd(TTboard1998)
+sd99 <- sorted.sd(TTboard1999)
+sd00 <- sorted.sd(TTboard2000)
+sd01 <- sorted.sd(TTboard2001)
+sd02 <- sorted.sd(TTboard2002)
+sd03 <- sorted.sd(TTboard2003)
+sd04 <- sorted.sd(TTboard2004)
+sd05 <- sorted.sd(TTboard2005)
+sd06 <- sorted.sd(TTboard2006)
+sd07 <- sorted.sd(TTboard2007)
+sd08 <- sorted.sd(TTboard2008)
+sd09 <- sorted.sd(TTboard2009)
+sd10 <- sorted.sd(TTboard2010)
+sd11 <- sorted.sd(TTboard2011)
 
 # -----2. think tanks founded each year-----
 TTattributes2011$Founded <- as.numeric(TTattributes2011$Founded)
@@ -631,35 +421,24 @@ ggplot(data = TTattributes2011, aes(Death), colour = 'gray') +
 
 # ----3. ideology across the years----
 #make three ideology columns into one column
-i1998 <- c(sum(TTattributes1998$left, na.rm = T),sum(TTattributes1998$centrist, na.rm = T),
-           sum(TTattributes1998$right, na.rm = T))
-i1999 <-  c(sum(TTattributes1999$left, na.rm = T),sum(TTattributes1999$centrist, na.rm = T),
-            sum(TTattributes1999$right, na.rm = T))
-i2000 <-  c(sum(TTattributes2000$left, na.rm = T),sum(TTattributes2000$centrist, na.rm = T),
-            sum(TTattributes2000$right, na.rm = T))
-i2001 <-  c(sum(TTattributes2001$left, na.rm = T),sum(TTattributes2001$centrist, na.rm = T),
-            sum(TTattributes2001$right, na.rm = T))
-i2002 <-  c(sum(TTattributes2002$left, na.rm = T),sum(TTattributes2002$centrist, na.rm = T),
-            sum(TTattributes2002$right, na.rm = T))
-i2003 <-  c(sum(TTattributes2003$left, na.rm = T),sum(TTattributes2003$centrist, na.rm = T),
-            sum(TTattributes2003$right, na.rm = T))
-i2004 <-  c(sum(TTattributes2004$left, na.rm = T),sum(TTattributes2004$centrist, na.rm = T),
-            sum(TTattributes2004$right, na.rm = T))
-i2005 <-  c(sum(TTattributes2005$left, na.rm = T),sum(TTattributes2005$centrist, na.rm = T),
-            sum(TTattributes2005$right, na.rm = T))
-i2006 <-  c(sum(TTattributes2006$left, na.rm = T),sum(TTattributes2006$centrist, na.rm = T),
-            sum(TTattributes2006$right, na.rm = T))
-i2007 <-  c(sum(TTattributes2007$left, na.rm = T),sum(TTattributes2007$centrist, na.rm = T),
-            sum(TTattributes2007$right, na.rm = T))
-i2008 <-  c(sum(TTattributes2008$left, na.rm = T),sum(TTattributes2008$centrist, na.rm = T),
-            sum(TTattributes2008$right, na.rm = T))
-i2009 <-  c(sum(TTattributes2009$left, na.rm = T),sum(TTattributes2009$centrist, na.rm = T),
-            sum(TTattributes2009$right, na.rm = T))
-i2010 <-  c(sum(TTattributes2010$left, na.rm = T),sum(TTattributes2010$centrist, na.rm = T),
-            sum(TTattributes2010$right, na.rm = T))
-i2011 <-  c(sum(TTattributes2011$left, na.rm = T),sum(TTattributes2011$centrist, na.rm = T),
-            sum(TTattributes2011$right, na.rm = T))
-
+ideology.function <- function(x){
+  c(sum(x$left, na.rm = T),sum(x$centrist, na.rm = T),
+    sum(x$right, na.rm = T))
+}
+i1998 <- ideology.function(TTattributes1998)
+i1999 <- ideology.function(TTattributes1999)
+i2000 <- ideology.function(TTattributes2000)
+i2001 <- ideology.function(TTattributes2001)
+i2002 <- ideology.function(TTattributes2002)
+i2003 <- ideology.function(TTattributes2003)
+i2004 <- ideology.function(TTattributes2004)
+i2005 <- ideology.function(TTattributes2005)
+i2006 <- ideology.function(TTattributes2006)
+i2007 <- ideology.function(TTattributes2007)
+i2008 <- ideology.function(TTattributes2008)
+i2009 <- ideology.function(TTattributes2009)
+i2010 <- ideology.function(TTattributes2010)
+i2011 <- ideology.function(TTattributes2011)
 
 ideology <- data.frame(i1998, i1999, i2000, i2001, i2002, i2003, i2004,
                        i2005, i2006, i2007, i2008, i2009, i2010, i2011) 
@@ -1087,7 +866,7 @@ stats_1998 <- c(374, network.density(person_overlap_1998),mean(person_deg_1998),
 # Think tank attributes #
 #########################
 # Entering the edgelists
-TTattributes1998 <- read_excel("/home/td/random_coding/think tank work/data/1998 think tank attributes.xls",col_names = TRUE,na = "")
+TTattributes1998 <- read_excel("/home/timo/work/Tilburg Uni work docs/think tank work/data/1998 think tank attributes.xls",col_names = TRUE,na = "")
 TTattributes1998 <- data.frame(TTattributes1998)
 #impute missing values for numeric variables
 TTattributes1998_imp <- cbind(TTattributes1998$ID, 
